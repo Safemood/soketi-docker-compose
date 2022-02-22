@@ -1,1 +1,1 @@
-# Simple docker-compose to soketi WebSockets server.
+# Simple docker-compose to run soketi WebSockets server.
