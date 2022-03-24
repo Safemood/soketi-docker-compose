@@ -3,20 +3,22 @@ services:
   # ...
 
   soketi:
-    container_name: "soketi_server"
+    container_name: 'soketi_server'
     restart: unless-stopped
     image: 'quay.io/soketi/soketi:0.17-16-alpine'
     ports:
       - '${SOKETI_PORT:-6001}:6001'
       - '${SOKETI_METRICS_SERVER_PORT:-9601}:9601'
     environment:
-      - DEBUG='1'
-      - PUSHER_APP_ID=some-id
-      - PUSHER_APP_SECRET=some-app-secret
-      - PUSHER_HOST=127.0.0.1
-      - PUSHER_PORT=6001
-      - PUSHER_SCHEME=http # or https
-      - METRICS_SERVER_PORT=9601
+      - DEBUG='${DEBUG:-1}'
+      - PUSHER_APP_ID='${PUSHER_APP_ID:-some-id}'
+      - PUSHER_APP_KEY='${PUSHER_APP_KEY:-app-key}'
+      - PUSHER_APP_SECRET='${PUSHER_APP_SECRET:-some-app-secret}'
+      - PUSHER_HOST='${PUSHER_HOST:-127.0.0.1}'
+      - PUSHER_PORT= '${PUSHER_PORT:-6001}'
+      - PUSHER_SCHEME='${PUSHER_SCHEME:-http}' # or https
+      - METRICS_SERVER_PORT=${METRICS_SERVER_PORT-9601}
+      - DEFAULT_APP_ENABLE_CLIENT_MESSAGES=${DEFAULT_APP_ENABLE_CLIENT_MESSAGES-false}
     networks:
       - soketi_network
 
