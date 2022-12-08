@@ -21,7 +21,7 @@ DEFAULT_APP_ENABLE_CLIENT_MESSAGES=false # make true if you want to enable clien
 docker-compose up -d
 ```
 
-## one line without docker-compose
+## **Without docker-compose**
 
 ```js
 docker run -p 6001:6001 -p 9601:9601 -e DEFAULT_APP_ID=some-id -e DEFAULT_APP_KEY=some-key -e DEFAULT_APP_SECRET=some-secret quay.io/soketi/soketi:0.17-16-alpine
