@@ -20,3 +20,15 @@ DEFAULT_APP_ENABLE_CLIENT_MESSAGES=false # make true if you want to enable clien
 ```js
 docker-compose up -d
 ```
+
+## one line
+
+```js
+docker run -p 6001:6001 -p 9601:9601 -e DEFAULT_APP_ID=some-id -e DEFAULT_APP_KEY=some-key -e DEFAULT_APP_SECRET=some-secret quay.io/soketi/soketi:0.17-16-alpine
+```
+
+## https://kbouzidi.com
+
+### you can check the related article <a href="https://kbouzidi.com/real-time-events-with-laravel-and-soketi">REAL-TIME EVENTS BROADCASTING WITH LARAVEL 9 & SOKETI
+
+</a>
