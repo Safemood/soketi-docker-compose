@@ -10,10 +10,10 @@ services:
       - '${SOKETI_PORT:-6001}:6001'
       - '${SOKETI_METRICS_SERVER_PORT:-9601}:9601'
     environment:
-      - DEBUG='${DEBUG:-1}'
-      - PUSHER_APP_ID='${PUSHER_APP_ID:-some-id}'
-      - PUSHER_APP_KEY='${PUSHER_APP_KEY:-app-key}'
-      - PUSHER_APP_SECRET='${PUSHER_APP_SECRET:-some-app-secret}'
+      - SOKETI_DEBUG='${DEBUG:-1}'
+      - DEFAULT_APP_ID='${PUSHER_APP_ID:-some-id}'
+      - DEFAULT_APP_KEY='${PUSHER_APP_KEY:-app-key}'
+      - DEFAULT_APP_SECRET='${PUSHER_APP_SECRET:-some-app-secret}'
       - PUSHER_HOST='${PUSHER_HOST:-127.0.0.1}'
       - PUSHER_PORT= '${PUSHER_PORT:-6001}'
       - PUSHER_SCHEME='${PUSHER_SCHEME:-http}' # or https
