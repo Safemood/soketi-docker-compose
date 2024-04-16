@@ -12,7 +12,7 @@ PUSHER_APP_SECRET=app-secret
 PUSHER_HOST=127.0.0.1
 PUSHER_PORT=6001
 PUSHER_SCHEME=http
-DEFAULT_APP_ENABLE_CLIENT_MESSAGES=false # make true if you want to enable client events
+DEFAULT_APP_ENABLE_CLIENT_MESSAGES=false # true if you want to enable client events
 ```
 
 ## **Run Soketi server**
